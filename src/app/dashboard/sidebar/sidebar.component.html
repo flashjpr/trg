@@ -1,0 +1,20 @@
+<div class="w-full h-full bg-blue-700 text-white p-4">
+  <ng-container *ngIf="!!selectedLocation">
+    <div class="flex flex-col mb-3">
+      <span class="font-semibold mb-1">{{ 'LOCATION' | translate }}:</span>
+      <span>{{ selectedLocation.title }}</span>
+    </div>
+    <div class="flex flex-col mb-3">
+      <span class="font-semibold mb-1">{{ 'LATITUDE' | translate }}:</span>
+      <span>{{ selectedLocation.position.lat }}</span>
+    </div>
+    <div class="flex flex-col">
+      <span class="font-semibold mb-1">{{ 'LONGITUDE' | translate }}:</span>
+      <span>{{ selectedLocation.position.lng }}</span>
+    </div>
+  </ng-container>
+
+  <button (click)="toggleSidebar.emit()" class="mb-4 bg-red-500 p-2 rounded">
+    {{ 'CLOSE' | translate }}
+  </button>
+</div>

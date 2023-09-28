@@ -1,0 +1,16 @@
+<div class="h-full flex flex-col">
+  <div class="flex-1 flex flex-row bg-[#f3f4f6]">
+    <app-sidebar
+      *ngIf="isSidebarOpen$ | async as isSidebarOpen"
+      [@widthInOut]="isSidebarOpen"
+      [isOpen]="isSidebarOpen"
+      [selectedLocation]="selectedLocation$ | async"
+      (toggleSidebar)="toggleSidebar()"
+      class="w-full max-w-[280px] block bg-white dark:bg-gray-900"
+    />
+
+    <app-google-map-view
+      (handleMapMarkerClicked)="selectLocation($event)"
+      class="flex-1" />
+  </div>
+</div>

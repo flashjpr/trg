@@ -1,0 +1,27 @@
+<google-map
+  #mapInstance
+  width="100%"
+  height="100%"
+  [center]="center"
+  [zoom]="zoom"
+  [options]="{
+    mapTypeId: 'terrain',
+    disableDefaultUI: true,
+    fullscreenControl: true
+  }"
+  (idle)="handleIdle()"
+>
+  <map-marker-clusterer [imagePath]="markerClustererImagePath">
+    <ng-container *ngIf="locations$ | async as locations">
+      <map-marker
+        #marker="mapMarker"
+        *ngFor="let location of locations; let i = index; trackBy: trackByFunction"
+        [position]="location.position"
+        [icon]="getMarkerIcon(location, selectedLocation$ | async)"
+        (mapClick)="onMarkerClick(location, i, marker)"
+      >
+      </map-marker>
+      <map-info-window>{{ infoWindowTitle }}</map-info-window>
+    </ng-container>
+  </map-marker-clusterer>
+</google-map>

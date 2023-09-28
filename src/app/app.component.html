@@ -1,0 +1,19 @@
+<div class="flex flex-col h-screen">
+  <nav class="bg-blue-500 p-4 text-white">
+    <div class="container mx-auto flex justify-between items-center">
+      <div class="space-x-4">
+        <a routerLink="/dashboard" class="hover:underline">{{ 'DASHBOARD' | translate }}</a>
+        <a routerLink="/directory" class="hover:underline">{{ 'DIRECTORY' | translate }}</a>
+      </div>
+
+      <select [(ngModel)]="currentLang" (change)="changeLanguage($event)" class="bg-white text-black p-2 rounded">
+        <option value="en">English</option>
+        <option value="es">Spanish</option>
+      </select>
+    </div>
+  </nav>
+
+  <main class="flex-grow [&>*]:block [&>*]:h-full">
+    <router-outlet class="!hidden" />
+  </main>
+</div>

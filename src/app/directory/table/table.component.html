@@ -1,0 +1,113 @@
+<table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+  <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+    <tr>
+      <ng-container *ngIf="sorting$ | async as sorting">
+        <th (click)="onColumnClick('location')" scope="col" class="px-6 py-3">
+          {{ 'LOCATION' | translate }}
+          <fa-icon
+            *ngIf="sorting.sortColumn === 'location' && sorting.sortAscending === true"
+            [icon]="faArrowUp"
+          ></fa-icon>
+          <fa-icon
+            *ngIf="sorting.sortColumn === 'location' && sorting.sortAscending === false"
+            [icon]="faArrowDown"
+          ></fa-icon>
+        </th>
+
+        <th (click)="onColumnClick('lat')" scope="col" class="px-6 py-3">
+          {{ 'LATITUDE' | translate }}
+          <fa-icon *ngIf="sorting.sortColumn === 'lat' && sorting.sortAscending === true" [icon]="faArrowUp"></fa-icon>
+          <fa-icon
+            *ngIf="sorting.sortColumn === 'lat' && sorting.sortAscending === false"
+            [icon]="faArrowDown"
+          ></fa-icon>
+        </th>
+
+        <th (click)="onColumnClick('lng')" scope="col" class="px-6 py-3">
+          {{ 'LONGITUDE' | translate }}
+          <fa-icon *ngIf="sorting.sortColumn === 'lng' && sorting.sortAscending === true" [icon]="faArrowUp"></fa-icon>
+          <fa-icon
+            *ngIf="sorting.sortColumn === 'lng' && sorting.sortAscending === false"
+            [icon]="faArrowDown"
+          ></fa-icon>
+        </th>
+        <th scope="col" class="px-6 py-3"></th>
+      </ng-container>
+    </tr>
+  </thead>
+  <tbody>
+    <ng-container [formGroup]="locationForm">
+      <tr class="bg-gray-100 dark:bg-gray-600">
+        <td class="px-6 py-4">
+          <input
+            type="text"
+            formControlName="title"
+            placeholder="{{ 'LOCATION' | translate }}"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          />
+        </td>
+        <td class="px-6 py-4">
+          <input
+            formControlName="latitude"
+            type="number"
+            placeholder="{{ 'LATITUDE' | translate }}"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          />
+        </td>
+        <td class="px-6 py-4">
+          <input
+            formControlName="longitude"
+            type="number"
+            placeholder="{{ 'LONGITUDE' | translate }}"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          />
+        </td>
+        <td class="px-6 py-4 flex justify-between space-x-2">
+          <button
+            *ngIf="selectedLocation"
+            type="button"
+            (click)="cancelEditLocation()"
+            class="text-white font-medium rounded-lg text-sm px-5 py-2.5 text-center hover:bg-red-600"
+            [ngClass]="{
+              'bg-red-400 dark:bg-red-500 cursor-pointer': true
+            }"
+          >
+            {{ 'CANCEL' | translate }}
+          </button>
+
+          <button
+            type="button"
+            class="text-white font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+            [ngClass]="{
+              'bg-blue-400 dark:bg-blue-500 cursor-not-allowed': locationForm.invalid,
+              'bg-blue-500 dark:bg-blue-600 cursor-pointer': !locationForm.invalid
+            }"
+            [disabled]="locationForm.invalid"
+            (click)="submitLocation()"
+          >
+            {{ selectedLocation ? ('SAVE' | translate) : ('ADD' | translate) }}
+          </button>
+        </td>
+      </tr>
+    </ng-container>
+
+    <tr
+      *ngFor="let location of locations"
+      class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
+    >
+      <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+        {{ location.title }}
+      </th>
+      <td class="px-6 py-4">{{ location.position.lat }}</td>
+      <td class="px-6 py-4">{{ location.position.lng }}</td>
+      <td class="px-6 py-4">
+        <a
+          href="javascript:void(0)"
+          (click)="editLocation(location)"
+          class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+          >Edit</a
+        >
+      </td>
+    </tr>
+  </tbody>
+</table>

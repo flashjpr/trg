@@ -1,0 +1,250 @@
+[
+  {
+    "title": "Buckingham Palace",
+    "position": {
+      "lat": 51.5014,
+      "lng": -0.1419
+    },
+    "id": "1"
+  },
+  {
+    "title": "Big Ben",
+    "position": {
+      "lat": 51.5007,
+      "lng": -0.1246
+    },
+    "id": "2"
+  },
+  {
+    "title": "London Eye",
+    "position": {
+      "lat": 51.5033,
+      "lng": -0.1197
+    },
+    "id": "3"
+  },
+  {
+    "title": "British Museum",
+    "position": {
+      "lat": 51.5194,
+      "lng": -0.127
+    },
+    "id": "4"
+  },
+  {
+    "title": "Tate Modern",
+    "position": {
+      "lat": 51.5076,
+      "lng": -0.0996
+    },
+    "id": "5"
+  },
+  {
+    "title": "Tower of London",
+    "position": {
+      "lat": 51.5081,
+      "lng": -0.0759
+    },
+    "id": "6"
+  },
+  {
+    "title": "St. Paul's Cathedral",
+    "position": {
+      "lat": 51.5138,
+      "lng": -0.0984
+    },
+    "id": "7"
+  },
+  {
+    "title": "Westminster Abbey",
+    "position": {
+      "lat": 51.4993,
+      "lng": -0.1273
+    },
+    "id": "8"
+  },
+  {
+    "title": "Trafalgar Square",
+    "position": {
+      "lat": 51.508,
+      "lng": -0.1281
+    },
+    "id": "9"
+  },
+  {
+    "title": "Natural History Museum",
+    "position": {
+      "lat": 51.4967,
+      "lng": -0.1765
+    },
+    "id": "10"
+  },
+  {
+    "title": "Science Museum",
+    "position": {
+      "lat": 51.4975,
+      "lng": -0.1745
+    },
+    "id": "11"
+  },
+  {
+    "title": "The Shard",
+    "position": {
+      "lat": 51.5045,
+      "lng": -0.0865
+    },
+    "id": "12"
+  },
+  {
+    "title": "Tower Bridge",
+    "position": {
+      "lat": 51.5055,
+      "lng": -0.0754
+    },
+    "id": "13"
+  },
+  {
+    "title": "Covent Garden",
+    "position": {
+      "lat": 51.5117,
+      "lng": -0.123
+    },
+    "id": "14"
+  },
+  {
+    "title": "Victoria and Albert Museum",
+    "position": {
+      "lat": 51.4966,
+      "lng": -0.1722
+    },
+    "id": "15"
+  },
+  {
+    "title": "Piccadilly Circus",
+    "position": {
+      "lat": 51.5099,
+      "lng": -0.1345
+    },
+    "id": "16"
+  },
+  {
+    "title": "Royal Opera House",
+    "position": {
+      "lat": 51.5129,
+      "lng": -0.1224
+    },
+    "id": "17"
+  },
+  {
+    "title": "Oxford Street",
+    "position": {
+      "lat": 51.5152,
+      "lng": -0.1419
+    },
+    "id": "18"
+  },
+  {
+    "title": "Regent's Park",
+    "position": {
+      "lat": 51.5277,
+      "lng": -0.1544
+    },
+    "id": "19"
+  },
+  {
+    "title": "The National Gallery",
+    "position": {
+      "lat": 51.5089,
+      "lng": -0.1283
+    },
+    "id": "20"
+  },
+  {
+    "title": "Hyde Park",
+    "position": {
+      "lat": 51.5073,
+      "lng": -0.1657
+    },
+    "id": "21"
+  },
+  {
+    "title": "Houses of Parliament",
+    "position": {
+      "lat": 51.4995,
+      "lng": -0.1248
+    },
+    "id": "22"
+  },
+  {
+    "title": "Leicester Square",
+    "position": {
+      "lat": 51.5105,
+      "lng": -0.1303
+    },
+    "id": "23"
+  },
+  {
+    "title": "Soho",
+    "position": {
+      "lat": 51.5136,
+      "lng": -0.1367
+    },
+    "id": "24"
+  },
+  {
+    "title": "Canary Wharf",
+    "position": {
+      "lat": 51.5054,
+      "lng": -0.0235
+    },
+    "id": "25"
+  },
+  {
+    "title": "The Gherkin",
+    "position": {
+      "lat": 51.5142,
+      "lng": -0.0802
+    },
+    "id": "26"
+  },
+  {
+    "title": "The Barbican Centre",
+    "position": {
+      "lat": 51.5201,
+      "lng": -0.0939
+    },
+    "id": "27"
+  },
+  {
+    "title": "The Globe Theatre",
+    "position": {
+      "lat": 51.5081,
+      "lng": -0.0972
+    },
+    "id": "28"
+  },
+  {
+    "title": "Sky Garden",
+    "position": {
+      "lat": 51.5113,
+      "lng": -0.0833
+    },
+    "id": "29"
+  },
+  {
+    "title": "Camden Market",
+    "position": {
+      "lat": 51.5405,
+      "lng": -0.146
+    },
+    "id": "30"
+  },
+  {
+    "title": "Buckingham Palace Copy",
+    "position": {
+      "lat": 51.5012,
+      "lng": -0.1418
+    },
+    "id": "31"
+  }
+]
