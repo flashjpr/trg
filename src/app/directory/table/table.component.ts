@@ -22,7 +22,7 @@ export class TableComponent implements OnInit {
 
   faArrowUp = faArrowUp;
   faArrowDown = faArrowDown;
-  sorting$ = this.store.select(locationsQuery.selectSorting)
+  sorting$ = this.store.select(locationsQuery.selectSorting);
   constructor(
     private fb: FormBuilder,
     private store: Store<AppState>,

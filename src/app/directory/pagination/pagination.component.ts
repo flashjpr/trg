@@ -42,10 +42,10 @@ export class PaginationComponent {
   }
 
   get showingFrom(): number {
-    return ((this.pagination!.currentPage - 1) * this.pagination!.itemsPerPage) + 1
+    return (this.pagination!.currentPage - 1) * this.pagination!.itemsPerPage + 1;
   }
 
   get showingTo(): number {
-    return Math.min(this.pagination!.currentPage * this.pagination!.itemsPerPage, this.pagination!.totalItems)
+    return Math.min(this.pagination!.currentPage * this.pagination!.itemsPerPage, this.pagination!.totalItems);
   }
 }

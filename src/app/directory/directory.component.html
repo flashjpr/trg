@@ -5,10 +5,6 @@
       (handleAddLocation)="handleAddLocation($event)"
       (handleEditLocation)="handleEditLocation($event)"
     />
-    <app-pagination
-      [pagination]="pagination$ | async"
-      (handleOnPageChange)="handleOnPageChange($event)"
-    />
+    <app-pagination [pagination]="pagination$ | async" (handleOnPageChange)="handleOnPageChange($event)" />
   </div>
-
 </div>

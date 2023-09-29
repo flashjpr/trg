@@ -38,7 +38,7 @@ export function HttpLoaderFactory(http: HttpClient) {
       },
     }),
     FormsModule,
-    FontAwesomeModule
+    FontAwesomeModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -30,6 +30,6 @@ export class DirectoryComponent implements OnDestroy {
   }
 
   ngOnDestroy() {
-    this.store.dispatch(LocationActions.cleanSortingPagination())
+    this.store.dispatch(LocationActions.cleanSortingPagination());
   }
 }
