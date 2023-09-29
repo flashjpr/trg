@@ -83,6 +83,10 @@ export const locationFeature = createFeature({
     // table column sort
     on(LocationActions.setSortColumn, (state, { column }) => ({
       ...state,
+      pagination: {
+        ...state.pagination,
+        currentPage: 1
+      },
       sorting: {
         ...state.sorting,
         sortColumn: column as 'location' | 'lat' | 'lng',
